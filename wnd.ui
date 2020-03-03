@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1130</width>
+    <height>831</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_9">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTreeWidget" name="treeWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <column>
+         <property name="text">
+          <string notr="true">检测文件目录树</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="pic_show">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>配置信息:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>检测图片路径:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="le_Pic_path"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <item>
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>模型路径:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="le_module_path"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>结果保存路径:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="le_Save_path"/>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>检测类型:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="cBox"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>视频源路径:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="le_Video_path"/>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1130</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>配置</string>
+    </property>
+    <addaction name="set_pic_path"/>
+    <addaction name="set_video_path"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>操作</string>
+    </property>
+    <addaction name="start_detect"/>
+    <addaction name="open_results"/>
+   </widget>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="new_pro">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/xinjian.ico</normaloff>:/ico/res/xinjian.ico</iconset>
+   </property>
+   <property name="text">
+    <string>创建工程</string>
+   </property>
+  </action>
+  <action name="open_pro">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/open.ico</normaloff>:/ico/res/open.ico</iconset>
+   </property>
+   <property name="text">
+    <string>打开工程</string>
+   </property>
+  </action>
+  <action name="save_pro">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/save.ico</normaloff>:/ico/res/save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>保存工程</string>
+   </property>
+  </action>
+  <action name="saveas_pro">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/save_as.ico</normaloff>:/ico/res/save_as.ico</iconset>
+   </property>
+   <property name="text">
+    <string>另存为工程</string>
+   </property>
+  </action>
+  <action name="set_pic_path">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/peizhi2.ico</normaloff>:/ico/res/peizhi2.ico</iconset>
+   </property>
+   <property name="text">
+    <string>设置文件目录</string>
+   </property>
+  </action>
+  <action name="save_results_path">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/peizhi1.ico</normaloff>:/ico/res/peizhi1.ico</iconset>
+   </property>
+   <property name="text">
+    <string>设置保存目录</string>
+   </property>
+  </action>
+  <action name="read_module">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/read_h5.ico</normaloff>:/ico/res/read_h5.ico</iconset>
+   </property>
+   <property name="text">
+    <string>读取模型文件</string>
+   </property>
+  </action>
+  <action name="open_results">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/open_results.ico</normaloff>:/ico/res/open_results.ico</iconset>
+   </property>
+   <property name="text">
+    <string>查看检测结果</string>
+   </property>
+  </action>
+  <action name="start_detect">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/detect.ico</normaloff>:/ico/res/detect.ico</iconset>
+   </property>
+   <property name="text">
+    <string>开始检测</string>
+   </property>
+  </action>
+  <action name="set_video_path">
+   <property name="icon">
+    <iconset resource="qt_ico.qrc">
+     <normaloff>:/ico/res/video.ico</normaloff>:/ico/res/video.ico</iconset>
+   </property>
+   <property name="text">
+    <string>设置视频源</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="qt_ico.qrc"/>
+ </resources>
+ <connections/>
+</ui>

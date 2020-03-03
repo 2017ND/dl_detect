@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="ico">
+    <file>res/face_detect.ico</file>
+    <file>res/video.ico</file>
+    <file>res/xinjian.ico</file>
+    <file>res/save_as.ico</file>
+    <file>res/save.ico</file>
+    <file>res/read_h5.ico</file>
+    <file>res/peizhi2.ico</file>
+    <file>res/peizhi1.ico</file>
+    <file>res/open_results.ico</file>
+    <file>res/open.ico</file>
+    <file>res/detect.ico</file>
+  </qresource>
+</RCC>
